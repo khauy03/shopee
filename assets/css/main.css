@@ -1,0 +1,649 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(180deg, #f6402d, #ff6533);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 160px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0px;
+    margin-top: 8px;
+}
+
+.nav-item {
+    font-size: 13px;
+    color: white;
+    margin: 0 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-item a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.nav-item--bold a{
+    font-weight: 500;
+}
+
+.nav-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid rgba(192, 192, 192, 0.5);
+    height: 14px;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text {
+    cursor: text;
+}
+
+.connect {
+    margin: 4px;
+}
+
+.download {
+    background-color: white;
+    width: 192px;
+    position: absolute;
+    padding: 4px;
+    border-radius: 2px;
+    display: none;
+}
+
+.download .QR-img {
+    width: 100%;
+}
+
+.download .apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.download .link {
+    width: 50%;
+}
+
+.download .link-img{
+    width: 80%;
+    margin-left: 10px;
+}
+
+.nav-item--download:hover .download {
+    display: block;
+    z-index: 1;
+}
+
+.popup-notification {
+    width: 410px;
+    background-color: white;
+    position: absolute;
+    top: 160%;
+    right: 0;
+    border-radius: 2px;
+    display: none;
+    box-shadow: 0 1px 5px rgb(189, 189, 189);
+}
+
+.popup-notification::before {
+    content: "";
+    border-width: 10px 15px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 25px;
+    top: -20px;
+}
+
+.notification-img {
+    display: block;
+    position: inherit;
+    width: 23%;
+    margin: 80px auto 20px auto;
+}
+
+
+.noti-text {
+    color: black;
+    display: inline-block;
+    position: inherit;
+    margin-left: 30%;
+    margin-bottom: 10%;
+}
+
+.popup-notification .register {
+    background-color: #f5f5f5;
+    position: inherit;
+    display: flex;
+    width: 100%;
+    height: 35px;
+    justify-content: space-around; 
+    
+}
+
+.popup-notification .register a {
+    color: black;  
+}
+
+
+.popup-notification .sign-up {
+    padding: 2.5% 18.5%;
+}
+
+.popup-notification .sign-in {
+    padding: 2.5% 17%;
+}
+
+.popup-notification .sign-up:hover, .popup-notification .sign-in:hover  {
+    color: rgb(255, 81, 0);
+    background-color: rgb(187, 187, 187);
+}
+
+.nav-item--notification:hover .popup-notification{
+    display: block;
+    z-index: 1;
+}
+
+.search-wrapper {
+    display: flex;
+    height: 85px;
+    margin: 0 160px;
+    align-items: center;
+
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo-img {
+    width: 100%;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.search-area {
+    margin: 0 50px;
+    height: 60px;
+    width: 840;
+}
+
+.search-box {
+    background-color: white;
+    width: 840px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+.input-area {
+    position: relative;
+    width: 762px;
+}
+
+.search-input {
+    height: 100%;
+    width: 99%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-left:16px;
+}
+
+.search-history {
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    top: calc(100% + 15px);
+    background-color: white;
+    font-size: 14px;
+    line-height: 28px;
+    border-radius: 3px;
+    padding-left: 14px;
+    box-shadow: 0 1px 5px rgb(189, 189, 189);
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.search-input:focus ~.search-history {
+    display: flex;
+}
+
+.search-banner {
+    width: 15%;
+}
+
+.icon-search {
+    margin-right: 4px;
+    padding: 8px 24px;
+    background-color: rgb(255, 81, 0);
+    color: white;
+    border-radius: 2px;
+}
+
+.fa-search {
+    font-size: 14px;
+}
+
+.recommendation {
+    margin-top: 4px;
+    height: 20px;
+    width: 840px;
+    display: flex;
+    align-items: center;
+}
+
+.recommendation .recommend {
+    list-style: none;
+    margin: 0;
+    padding-left: 0px;
+}
+
+.recommendation .recommend-items {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+
+.recommendation .recommend-items a {
+    color:rgb(228, 225, 225);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cart {
+    width: 40px;
+    position: relative;
+}
+
+.cart-item {
+    color: white;
+    font-size: 26px;
+}
+
+.cart-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 128%;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    right: 0;
+    box-shadow: 0 1px 5px rgb(189, 189, 189); 
+    border-radius: 3px;
+}
+
+.cart-list::before {
+    content: "";
+    position: absolute;
+    border-width: 10px 14px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    right: 8px;
+    top: -18px;
+}
+
+.cart-empty-img {
+    width: 50%;
+    margin: auto auto 20px auto;
+}
+
+.cart-text {
+    font-size: 14px;
+    margin: 0 auto auto auto;
+}
+
+.cart:hover .cart-list {
+    display: flex;
+    z-index: 1;
+}
+
+.container {
+    /*height: 5000px;*/
+    margin: 0 160px;
+}
+
+.advertise {
+    display: flex;
+    margin-top: 30px;
+    height: 247.5px;
+    justify-content: space-between;
+}
+
+.advertise .item1 {
+    width: 67%;
+}
+
+.advertise .item1 .item1-img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.advertise .item23 {
+    display: flex;
+    width: 32.45%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.advertise .item23 .item2 {
+    width: 100%;
+}
+
+.advertise .item23 .item2-img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.advertise .item23 .item3 {
+    width: 100%;
+}
+
+.advertise .item23 .item3-img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.banner{
+    height: 150px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 16px;
+    margin: 8px 0 16px 0;
+}
+
+.banner-bar{
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.banner-item{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+
+}
+
+.banner-item-img{
+    margin-left: 30%;
+    width: 40%;
+}
+
+.banner-item-text{
+    text-align: center;
+}
+
+.banner-ad {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.banner-ad-img {
+    width: 100%;
+}
+
+.banner-sale{
+    width: 100%;
+    background-image: url("../img/sale/frame.png");
+
+    background-repeat: no-repeat;
+}
+
+.banner-sale .banner-direction {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 30px 20px 30px;
+}
+
+.banner-sale .best-selling-area{
+
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-sale .best-selling{
+    font-size: 18px;
+    color: #ef5b3c;
+}
+
+.banner-sale .more{
+    font-size: 14px;
+    text-decoration: none;
+    color: #ef5b3c;
+}
+
+
+.banner-sale .most-feature-area{
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-sale .most-feature{
+    font-size: 16px;
+    color: #ef5b3c
+}
+
+.list-sale-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 17.5px;
+}
+
+.banner-sale .best-selling-list{
+    list-style: none;
+    width: 48%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 0;
+    
+}
+
+.banner-sale .best-selling-item{
+    width: 33%;
+    display: inline-block;
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 75px;
+}
+
+.banner-sale .item{
+    text-decoration: none;
+    color: #ef5b3c;
+    font-size: 18px;
+
+}
+
+.banner-sale .item-img{
+    width: 100%;
+}
+
+.banner-sale .item-price{
+    text-align: center;
+}
+
+.banner-sale .most-feature-list {
+    width: 48%;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.banner-sale .most-feature-item {
+    width: 33%;
+    display: inline-block;
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 75px;
+
+}
+
+.banner-sale .most-feature-item .img-brand {
+    position: relative;
+    display: flex;
+}
+
+.banner-sale .most-feature-item .item-img {
+    width: 100%;
+}
+
+.banner-sale .most-feature-item .brand {
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    bottom: -25px;
+    left: 10%;
+    padding: 6px 40px;
+    border-radius: 30px;
+    box-shadow: 0 1px 5px #ccc;
+    z-index: 1;
+}
+
+.most-feature-item .item-price {
+    position: relative;
+    text-transform: uppercase;
+    padding-top: 9%;
+    z-index: 1;
+}
+
+.category{
+    
+}
+
+.category-text{
+    background-color: white;
+    padding: 28px 20px;
+    color: #8c8c8c;
+    font-size: 16px;
+    margin: 10px 0 2px 0;
+}
+
+.category-list{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.category-item{
+    display: flex;
+    width: 9.9%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-link{
+    height: 49.8%;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.item-area{
+    height: 100%;
+    background-color: white;
+}
+
+.item-img{
+
+    width: 100%;
+    
+}
+
+.item-text{
+    text-align: center;
+}
+
+.about {
+    width: 100%;
+    padding: 60px 160px 20px 160px;
+    background-color: white;
+    border-top: 5px solid red;
+}
+
+.about .description-shopee {
+    font-size: 12px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.list-policy {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.policy-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.policy-item--separate::after {
+    content: "";
+    position: relative;
+    border-left: 1.5px solid rgba(197, 193, 193, 0.5);
+    font-size: 14px;
+    right: -20px;
+}
+
+.policy-item a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.certificate {
+    display: flex;
+    justify-content: center;
+}
+.certificate a {
+    margin-left: 20px;
+}
+
+.certificate-img {
+    width: 100%;
+}
+
+.ending-script {
+    text-align: center;
+    color: rgb(102, 101, 101);
+}
